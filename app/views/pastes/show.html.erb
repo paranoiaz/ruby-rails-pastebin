@@ -1,0 +1,5 @@
+<div class="container">
+    <div class="alert alert-secondary">Created at <%= @paste.created_at %></div>
+    <pre><% @paste.content.each_line() do |line| %><code><%= line %></code><% end %></pre>
+    <%= link_to("View raw", "/paste/#{@paste.endpoint}/raw", class: "btn btn-secondary")%>
+</div>

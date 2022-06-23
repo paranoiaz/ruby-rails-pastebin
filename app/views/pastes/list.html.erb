@@ -1,0 +1,8 @@
+<div class="container">
+  <h1 class="display-6"><strong>&gt Pastes</strong></h1>
+  <div class="list-group">
+    <% @pastes.each do |paste| %>
+      <%= link_to("0x#{paste.id.to_s(16).upcase()} #{paste.endpoint}", "/paste/#{paste.endpoint}", class: "list-group-item list-group-item-action")%>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="container">
+    <h1 class="bold display-6"><strong>&gt New Paste</strong></h1>
+    <%= form_with(model: @paste) do |form| %>
+        <%= form.text_area(:content, class: "form-control input-area") %>
+        <br>
+        <%= form.submit(:Create, class: "btn btn-secondary") %>
+    <% end %>
+</div>
